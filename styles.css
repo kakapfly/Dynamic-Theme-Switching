@@ -140,6 +140,17 @@ header p {
 .social-icons a img:hover {
     transform: scale(1.2);
 }
+@media (max-width: 768px) {
+    .social-icons {
+        top: auto;
+        bottom: 10px; /* Move to the bottom */
+        right: 10px;
+        flex-direction: row; /* Change layout to horizontal */
+        gap: 10px;
+        padding: 5px;
+    }
+}
+
 
 /* Moving Image Styles */
 .moving-image-container {
