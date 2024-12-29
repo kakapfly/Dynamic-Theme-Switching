@@ -100,12 +100,12 @@ header p {
         transform: scale(1.2);
     }
     50% {
-        top: 90%;
-        left: 90%;
+        top: 50%;
+        left: 50%;
         transform: scale(1.1);
     }
     75% {
-        top: 90%;
+        top: 50%;
         left: 10%;
         transform: scale(1.2);
     }
