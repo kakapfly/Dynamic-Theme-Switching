@@ -17,7 +17,7 @@ function adjustFooter() {
     }
 }
 // Dynamic Theme Switching
-function toggleTheme() {
+/* function toggleTheme() {
     const body = document.body;
     const currentTheme = body.dataset.theme || 'light';
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
@@ -39,7 +39,7 @@ function setupThemeToggle() {
     if (toggleButton) {
         toggleButton.addEventListener('click', toggleTheme);
     }
-}
+} */
 
 window.addEventListener('load', () => {
     loadTheme();
