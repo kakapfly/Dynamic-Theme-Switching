@@ -1,14 +1,11 @@
-/* General Styles 
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: rgba(240, 236, 141); /* Set your background image */
-   /* background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: white;
-} */
+    color: #2c3e50;
+}
 
 body {
     background: linear-gradient(120deg, #fcb69f, #66a6ff, #a8edea, #fcb69f);
@@ -25,37 +22,6 @@ body {
     75% { background-position: 50% 100%; }
     100% { background-position: 0% 50%; }
 }
-
-/* body[data-theme='light'] {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-}
-
-body[data-theme='dark'] {
-    --bg-color: #2c3e50;
-    --text-color: #ecf0f1;
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-}
-
-.theme-button {
-    padding: 10px 15px;
-    background-color: var(--text-color);
-    color: var(--bg-color);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.theme-button:hover {
-    opacity: 0.8;
-}*/
-
-
 
 /* Header Styles */
 header {
@@ -81,45 +47,7 @@ header p {
     color: #bdc3c7;
 }
 
-/* Floating Social Media Toolbar */
-.social-icons {
-    position: fixed;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    z-index: 1000;
-    transition: left 0.3s ease, top 0.3s ease;
-}
-
-/* Adjust for smaller screens */
-@media (max-width: 768px) {
-    .social-icons {
-        top: auto;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        flex-direction: row;
-        gap: 10px;
-    }
-}
-
-.social-icons a img {
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.social-icons a img:hover {
-    transform: scale(1.2);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-
-/* Social Media Icons */
+/* Floating Social Media Icons */
 .social-icons {
     position: fixed;
     top: 50%;
@@ -140,158 +68,153 @@ header p {
 .social-icons a img:hover {
     transform: scale(1.2);
 }
-@media (max-width: 768px) {
-    .social-icons {
-        top: auto;
-        bottom: 10px; /* Move to the bottom */
-        right: 10px;
-        flex-direction: row; /* Change layout to horizontal */
-        gap: 10px;
-        padding: 5px;
-    }
-}
 
-
-/* Moving Image Styles */
-.moving-image-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.moving-image {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    pointer-events: none;
-}
-
-/* Main Content */
-main {
-    padding: 20px;
-}
-
-/* Add hover animations for sections */
-.about-token, .token-details {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Token Details Section */
-.token-details {
-    margin: 20px auto;
-    padding: 20px;
-    background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    max-width: 600px;
-    color: #2c3e50;
-}
-
-.token-details h2 {
-    text-align: center;
-    color: #34495e;
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-}
-
-.token-card {
+/* About Token Section */
+.about-token {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(120deg, #fcb69f, #66a6ff);
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    text-align: center;
+    color: #2c3e50;
+    transition: all 0.3s ease-in-out;
 }
 
-.token-item {
+.about-token h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.about-token p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #7f8c8d;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Key Features Section */
+.key-features {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 15px;
-    background: #ecf0f1;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    justify-content: space-around;
+    margin-top: 30px;
+    width: 100%;
+    gap: 20px;
+}
+
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.token-item strong {
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
     font-weight: bold;
     color: #2c3e50;
 }
 
-.token-item span {
-    font-weight: normal;
+.feature p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+/* CTA Section */
+.cta {
+    background-color: #ecf0f1;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cta h3 {
+    font-size: 2rem;
+    font-weight: bold;
     color: #34495e;
-    word-wrap: break-word;
 }
 
-.token-item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.cta p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-top: 10px;
 }
 
-
-/* Buy Now Button */
-.buy-now {
+.cta-button {
     display: inline-block;
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
-    margin-top: 10px;
-    text-decoration: none;
-    border-radius: 5px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
     font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.buy-now:hover {
+.cta-button:hover {
     background-color: #45a049;
 }
 
-.buy-now.blink {
-    animation: blink 1s infinite;
+/* Hover Effect for About Token Section */
+.about-token:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-}
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .about-token h2 {
+        font-size: 2.5rem;
+    }
 
-/* Blinking Effect */
-@keyframes blink {
-    50% {
-        opacity: 0.5;
+    .about-token p {
+        font-size: 1.2rem;
     }
-}
 
-/* Animation for Moving Image */
-@keyframes move {
-    0% {
-        top: 0;
-        left: 0;
+    .key-features {
+        flex-direction: column;
+        align-items: center;
     }
-    25% {
-        top: 0;
-        left: 80%;
-    }
-    50% {
-        top: 80%;
-        left: 80%;
-    }
-    75% {
-        top: 80%;
-        left: 0;
-    }
-    100% {
-        top: 0;
-        left: 0;
+
+    .cta-button {
+        font-size: 1rem;
     }
 }
 
-.moving-image {
-    animation: move 10s linear infinite;
+@media (max-width: 480px) {
+    .about-token h2 {
+        font-size: 2rem;
+    }
+
+    .about-token p {
+        font-size: 1rem;
+    }
 }
