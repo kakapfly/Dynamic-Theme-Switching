@@ -46,6 +46,28 @@ window.addEventListener('load', () => {
     setupThemeToggle();
 });
 
+// Reposition the floating social icons on resize or scroll
+function adjustSocialToolbar() {
+    const toolbar = document.querySelector('.social-icons');
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth <= 768) {
+        toolbar.style.top = 'auto';
+        toolbar.style.bottom = '10px';
+        toolbar.style.left = '50%';
+        toolbar.style.transform = 'translateX(-50%)';
+    } else {
+        toolbar.style.top = '50%';
+        toolbar.style.left = '10px';
+        toolbar.style.transform = 'translateY(-50%)';
+    }
+}
+
+// Set up event listeners for toolbar adjustments
+window.addEventListener('resize', adjustSocialToolbar);
+window.addEventListener('load', adjustSocialToolbar);
+
+
 
 window.addEventListener('load', adjustFooter);
 window.addEventListener('resize', adjustFooter);
