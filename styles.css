@@ -73,13 +73,15 @@ header p {
     z-index: 9999;
 }
 
+/* Remove the animation and set a static position and size */
 .moving-image {
     position: absolute;
-    width: 70px; /* Adjust size */
-    height: 70px; /* Adjust size */
-    top: 10%;
+    width: 70px; /* Set a size that you prefer */
+    height: 70px;
+    top: 10%;  /* Set a static position */
     left: 10%;
-    animation: moveIcon 10s linear infinite;
+    /* No animation or movement */
+    animation: none; /* Disable the animation */
 }
 
 /* About Section */
