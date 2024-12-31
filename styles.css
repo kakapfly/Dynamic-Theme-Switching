@@ -27,7 +27,8 @@ body {
 header {
     text-align: center;
     padding: 20px;
-    background-color: rgba(44, 62, 80, 0.9); /* Transparent background */
+    background-image: url('0.1.webp');
+    /*  background-color: rgba(44, 62, 80, 0.9); /* Transparent background */
 }
 
 header .logo {
