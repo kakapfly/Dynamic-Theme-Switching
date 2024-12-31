@@ -3,19 +3,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: rgba(240, 236, 141);
+    color: #2c3e50;
+    overflow: hidden; /* Prevent scrolling when image moves outside viewport */
+}
+
+body {
     background: linear-gradient(120deg, #fcb69f, #66a6ff, #a8edea, #fcb69f);
     background-size: 300% 300%;
     animation: gradientAnimation 5s ease infinite;
-    color: #2c3e50;
-}
-
-/* Background Animation */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 50%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Header Styles */
