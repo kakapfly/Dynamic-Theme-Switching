@@ -146,30 +146,117 @@ header p {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-
-
-/* Key Features */
+/* Key Features Section */
 .key-features {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
-    flex-wrap: wrap;
+    width: 100%;
     gap: 20px;
 }
 
-/* CTA Button */
+.feature {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.feature p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+/* CTA Section */
+.cta {
+    background-color: #ecf0f1;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.cta h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
 .cta-button {
     display: inline-block;
     background-color: #4CAF50;
     color: white;
     padding: 12px 30px;
     font-size: 1.2rem;
-    text-decoration: none;
+    font-weight: bold;
     border-radius: 5px;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
     background-color: #45a049;
 }
+
+/* Hover Effect for About Token Section */
+.about-token:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .about-token h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-token p {
+        font-size: 1.2rem;
+    }
+
+    .key-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-token h2 {
+        font-size: 2rem;
+    }
+
+    .about-token p {
+        font-size: 1rem;
+
+
+
