@@ -1,4 +1,13 @@
-// Adjust footer position for responsiveness
+// Debounce function to improve performance on resize
+function debounce(func, wait) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
+// Adjust footer position dynamically
 function adjustFooter() {
     const body = document.body;
     const html = document.documentElement;
@@ -17,5 +26,8 @@ function adjustFooter() {
     }
 }
 
+// Attach events with debounce for better performance
+const adjustFooterDebounced = debounce(adjustFooter, 200);
+
 window.addEventListener('load', adjustFooter);
-window.addEventListener('resize', adjustFooter);
+window.addEventListener('resize', adjustFooterDebounced);
