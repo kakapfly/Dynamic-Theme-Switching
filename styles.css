@@ -64,7 +64,7 @@ header p {
 
 /* Moving Image Styles */
 .moving-image-container {
-   
+   position: fixed;
     top: 0;
     left: 0;
     width: 100%;
