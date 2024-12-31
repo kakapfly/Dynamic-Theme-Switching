@@ -72,16 +72,55 @@ header p {
     pointer-events: none;
     z-index: 9999;
 }
-
-/* Remove the animation and set a static position and size */
+* Moving Image Styles */
 .moving-image {
     position: absolute;
-    width: 70px; /* Set a size that you prefer */
-    height: 70px;
-    top: 10%;  /* Set a static position */
-    left: 10%;
-    /* No animation or movement */
-    animation: none; /* Disable the animation */
+    width: 100px; /* Set the size of the image */
+    height: 100px;
+    animation: moveIcon 15s linear infinite, scaleRotate 3s infinite ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Keyframes for moving icon animation */
+@keyframes moveIcon {
+    0% {
+        top: 10%;
+        left: 10%;
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        top: 10%;
+        left: 90%;
+        transform: scale(1.1) rotate(45deg);
+    }
+    50% {
+        top: 90%;
+        left: 50%;
+        transform: scale(1) rotate(90deg);
+    }
+    75% {
+        top: 90%;
+        left: 10%;
+        transform: scale(1.1) rotate(135deg);
+    }
+    100% {
+        top: 10%;
+        left: 10%;
+        transform: scale(1) rotate(180deg);
+    }
+}
+
+/* Scale and Rotate Keyframe for added movement */
+@keyframes scaleRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(90deg);
+    }
+    100% {
+        transform: scale(1) rotate(180deg);
+    }
 }
 
 /* About Section */
