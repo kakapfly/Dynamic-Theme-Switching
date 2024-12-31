@@ -14,21 +14,12 @@ body {
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
 }
-
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    25% { background-position: 50% 50%; }
-    50% { background-position: 100% 50%; }
-    75% { background-position: 50% 100%; }
-    100% { background-position: 0% 50%; }
-}
-
 /* Header Styles */
 header {
     text-align: center;
     padding: 20px;
-
- background-color: rgba(44, 62, 80, 0.9); /* Transparent background */
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #ecf0f1;
 }
 
 header .logo {
@@ -39,11 +30,9 @@ header .logo {
 header h1 {
     margin: 0;
     font-size: 2.5rem;
-    color: #ecf0f1;
 }
 
 header p {
-    margin: 10px 0 0;
     font-size: 1.2rem;
     color: #bdc3c7;
 }
@@ -59,64 +48,68 @@ header p {
     gap: 10px;
 }
 
-.social-icons a img {
+.social-icons img {
     width: 40px;
     height: 40px;
-    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 
-.social-icons a img:hover {
+.social-icons img:hover {
     transform: scale(1.2);
 }
 
-/* Moving Image Styles */
-.moving-image-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9999;
-}
 
+/* Moving Image Styles */
 .moving-image {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    animation: moveIcon 10s linear infinite;
+    width: 50px;  /* Image now much smaller */
+    height: 50px;
+    animation: moveIcon 15s linear infinite, scaleRotate 3s infinite ease-in-out;
+    z-index: 999;  /* Ensure the image stays on top */
 }
+
 
 /* Keyframes for moving icon animation */
 @keyframes moveIcon {
     0% {
         top: 10%;
         left: 10%;
-        transform: scale(1);
+        transform: scale(1) rotate(0deg);
     }
     25% {
         top: 10%;
         left: 90%;
-        transform: scale(1.2);
+        transform: scale(1.1) rotate(45deg);
     }
     50% {
-        top: 50%;
+        top: 90%;
         left: 50%;
-        transform: scale(1.1);
+        transform: scale(1) rotate(90deg);
     }
     75% {
-        top: 50%;
+        top: 90%;
         left: 10%;
-        transform: scale(1.2);
+        transform: scale(1.1) rotate(135deg);
     }
     100% {
         top: 10%;
         left: 10%;
-        transform: scale(1);
+        transform: scale(1) rotate(180deg);
     }
 }
 
+/* Scale and Rotate Keyframe for added movement */
+@keyframes scaleRotate {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(90deg);
+    }
+    100% {
+        transform: scale(1) rotate(180deg);
+    }
+}
 
 /* About Token Section */
 .about-token {
@@ -153,7 +146,6 @@ header p {
     margin: 0 auto;
     padding: 0 20px;
 }
-
 /* Key Features Section */
 .key-features {
     display: flex;
@@ -265,5 +257,6 @@ header p {
 
     .about-token p {
         font-size: 1rem;
-    }
-}
+
+
+
