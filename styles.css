@@ -111,8 +111,12 @@ header p {
     }
 }
 
-/* Token details section (example) */
+/* About Token Section */
 .about-token {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: 50px auto;
     padding: 40px;
     background: linear-gradient(120deg, #fcb69f, #66a6ff);
@@ -121,8 +125,7 @@ header p {
     max-width: 900px;
     text-align: center;
     color: #2c3e50;
-    position: relative; /* Token section */
-    z-index: 1; /* Make sure it stays behind the moving image */
+    transition: all 0.3s ease-in-out;
 }
 
 .about-token h2 {
@@ -132,6 +135,7 @@ header p {
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
+    transition: font-size 0.3s ease, color 0.3s ease;
 }
 
 .about-token p {
